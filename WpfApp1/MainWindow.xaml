@@ -6,34 +6,62 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Калькулятор" 
-        Height="200" Width="250"
+        Height="250" Width="250"
         VerticalAlignment="Stretch" HorizontalAlignment="Center"
         >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="1"  Grid.Row="1" Grid.Column="0"  />
-        <Button Content="2"  Grid.Row="1" Grid.Column="1"  />
-        <Button Content="3"  Grid.Row="1" Grid.Column="2"  />
-        <Button Content="4"  Grid.Row="2" Grid.Column="0"  />
-        <Button Content="5"  Grid.Row="2" Grid.Column="1"  />
-        <Button Content="6"  Grid.Row="2" Grid.Column="2"  />
-        <Button Content="7"  Grid.Row="3" Grid.Column="0"  />
-        <Button Content="8"  Grid.Row="3" Grid.Column="1"  />
-        <Button Content="9"  Grid.Row="3" Grid.Column="2"  />
-        <Button Content="9"  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Background="#FFE8D9D9"  />
-        <TextBox Grid.ColumnSpan="4" TextWrapping="Wrap" Text="TextBox" TextAlignment="Right"  />
-        <Button Content="+"  Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" Background="Bisque" FontSize="14" />
+        <TextBlock Grid.ColumnSpan="4" TextWrapping="Wrap" Text="TextBox" TextAlignment="Right" Padding="4" />
+        <Grid Grid.Row = "2" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <UniformGrid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Rows="2" Columns="4">
+                <Button Content="%" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="CE" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="C" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="←" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="1/x" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="x²" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="√x" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="÷" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+            </UniformGrid>
+
+
+            <UniformGrid Grid.Row="1" Grid.Column="1" Rows="4" Columns="1">
+                <Button Content="*" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="-" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="+" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+                <Button Content="=" BorderBrush="#FF4C4949" Background="#FFB5B5B5" />
+            </UniformGrid>
+
+            <UniformGrid Grid.Row="2" Grid.Column="0" Rows="4" Columns="3">
+                <Button Content="1"  Background="#FFFBFBFB"  />
+                <Button Content="2"  Background="#FFFBFBFB"  />
+                <Button Content="3"  Background="#FFFBFBFB"/>
+                <Button Content="4"  Background="#FFFBFBFB"/>
+                <Button Content="5"  Background="#FFFBFBFB"/>
+                <Button Content="6"  Background="#FFFBFBFB"/>
+                <Button Content="7"  Background="#FFFBFBFB"/>
+                <Button Content="8"  Background="#FFFBFBFB"/>
+                <Button Content="9"  Background="#FFFBFBFB"/>
+                <Button Content="+/-"  Background="#FFFBFBFB"/>
+                <Button Content="0"  Background="#FFFBFBFB"/>
+                <Button Content="."  Background="#FFFBFBFB"/>
+            </UniformGrid>
+        </Grid>
     </Grid>
 </Window>
